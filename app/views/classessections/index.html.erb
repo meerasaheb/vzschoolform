@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Classessections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pp1</th>
+      <th>Pp2</th>
+      <th>Class1</th>
+      <th>Class2</th>
+      <th>Class3</th>
+      <th>Class4</th>
+      <th>Class5</th>
+      <th>Class6</th>
+      <th>Addsection1</th>
+      <th>Addsection2</th>
+      <th>Addsection3</th>
+      <th>Addsection4</th>
+      <th>Addsection5</th>
+      <th>Addsection6</th>
+      <th>Addsection7</th>
+      <th>Addsection8</th>
+      <th>Sections1</th>
+      <th>Sections2</th>
+      <th>Sections3</th>
+      <th>Sections4</th>
+      <th>Sections5</th>
+      <th>Sections6</th>
+      <th>Sections7</th>
+      <th>Sections8</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @classessections.each do |classessection| %>
+      <tr>
+        <td><%= classessection.pp1 %></td>
+        <td><%= classessection.pp2 %></td>
+        <td><%= classessection.class1 %></td>
+        <td><%= classessection.class2 %></td>
+        <td><%= classessection.class3 %></td>
+        <td><%= classessection.class4 %></td>
+        <td><%= classessection.class5 %></td>
+        <td><%= classessection.class6 %></td>
+        <td><%= classessection.addsection1 %></td>
+        <td><%= classessection.addsection2 %></td>
+        <td><%= classessection.addsection3 %></td>
+        <td><%= classessection.addsection4 %></td>
+        <td><%= classessection.addsection5 %></td>
+        <td><%= classessection.addsection6 %></td>
+        <td><%= classessection.addsection7 %></td>
+        <td><%= classessection.addsection8 %></td>
+        <td><%= classessection.sections1 %></td>
+        <td><%= classessection.sections2 %></td>
+        <td><%= classessection.sections3 %></td>
+        <td><%= classessection.sections4 %></td>
+        <td><%= classessection.sections5 %></td>
+        <td><%= classessection.sections6 %></td>
+        <td><%= classessection.sections7 %></td>
+        <td><%= classessection.sections8 %></td>
+        <td><%= link_to 'Show', classessection %></td>
+        <td><%= link_to 'Edit', edit_classessection_path(classessection) %></td>
+        <td><%= link_to 'Destroy', classessection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Classessection', new_classessection_path %>

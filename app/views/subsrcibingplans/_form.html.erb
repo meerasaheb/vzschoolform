@@ -1,0 +1,72 @@
+<%= form_for(subsrcibingplan) do |f| %>
+  <% if subsrcibingplan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(subsrcibingplan.errors.count, "error") %> prohibited this subsrcibingplan from being saved:</h2>
+
+      <ul>
+      <% subsrcibingplan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class = "form2">
+      <h1 id= "newschooldetails">SUBSCRIBING PLAN </h1>
+      <img  src="../assets/Cancel-128.png" class="deleteimg1"> 
+   <div class = "subscrib-container">
+          <div class="subjectradios">
+               <%= f.label :name ,"SUBJECT:", class:"subjects" %>
+               <p>
+                  <%= f.radio_button :subject, 'ALL', id:"test3"%>
+                    <label for="test3" class="label">
+                        <span class="test2">ALL</span></label>
+                  <%= f.radio_button :subject, 'ALL', id:"test4"%>
+                   <label for="test4">
+                        <span class="test2">ICT ONLY</span></label>
+              </p>
+         </div><br>
+      <div class="features-container">
+              <%= f.label :name ,"FEATURES(select at applicable)",class:"subjects" %><br>
+            <div class = "ck-button-pa">
+                <div id="ck-button-pa1">
+                    <label>
+                        <%= check_box_tag 'subsrcibingplan[features][]','BUZZLE',checked1('BUZZLE'),id:"select"%><span>BUZZLE</span>
+                    </label>
+               </div> 
+               <div id="ck-button-pa2">
+                     <label>
+                       <%= check_box_tag 'subsrcibingplan[features][]','THINKMATE',checked1('THINKMATE'),class: "select_all" %><span>THINKMATE</span>
+                    </label>
+               </div>
+            </div>  
+          <div class = "ck-button-ch">
+               <div id="ck-button-ch1">
+                    <label>
+                       <%= check_box_tag 'subsrcibingplan[features][]','PPG',checked1('PPG'),class:"checkbox" %><span>PPG</span>
+                   </label>
+              </div>
+              <div id="ck-button-ch2">
+                    <label>
+                      <%= check_box_tag 'subsrcibingplan[features][]','QPG',checked1('QPG'),class:"checkbox" %><span>QPG</span>
+                  </label>
+             </div>
+             <div id="ck-button-ch3">
+                    <label>
+                      <%= check_box_tag 'subsrcibingplan[features][]','Assessment',checked1('Assessment'),class:"checkbox" %><span>Assessment</span>
+                    </label>
+              </div>
+              <div id="ck-button-ch4">
+                    <label>
+                      <%= check_box_tag 'subsrcibingplan[features][]','Reports',checked1('Reports'),class:"checkbox",id:"last" %><span>Reports</span>
+                   </label>
+              </div> 
+           </div>
+        </div>
+    </div>
+ 
+    <div class="actions">
+      <%= f.submit "Subscribplan", class:"submit" %>
+    </div>
+ </div>
+
+<% end %>

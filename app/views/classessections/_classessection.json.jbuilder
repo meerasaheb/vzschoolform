@@ -1,0 +1,2 @@
+json.extract! classessection, :id, :pp1, :pp2, :class1, :class2, :class3, :class4, :class5, :class6, :addsection1, :addsection2, :addsection3, :addsection4, :addsection5, :addsection6, :addsection7, :addsection8, :sections1, :sections2, :sections3, :sections4, :sections5, :sections6, :sections7, :sections8, :created_at, :updated_at
+json.url classessection_url(classessection, format: :json)

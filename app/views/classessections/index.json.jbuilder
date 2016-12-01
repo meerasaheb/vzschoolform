@@ -1,0 +1,1 @@
+json.array! @classessections, partial: 'classessections/classessection', as: :classessection

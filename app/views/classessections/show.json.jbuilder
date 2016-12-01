@@ -1,0 +1,1 @@
+json.partial! "classessections/classessection", classessection: @classessection

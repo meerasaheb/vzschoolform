@@ -1,0 +1,175 @@
+<%= form_for(classessection) do |f| %>
+  <% if classessection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(classessection.errors.count, "error") %> prohibited this classessection from being saved:</h2>
+
+      <ul>
+      <% classessection.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class = "form3">
+       <h1 id= "newschooldetails">SUBSCRIBING PLAN </h1>
+      <img  src="../assets/Cancel-128.png" class="deleteimg1">
+       <h3 id= "h3">SelectClasses</h3> 
+     <div class = "classsection">
+     
+           <div id="pp1">
+              <label>
+                <%= check_box_tag 'classessection[pp1][]','PP1',checked('PP1'),id:"select"%><span >PPG</span>
+              </label>
+           </div>
+           <div id="pp1">
+               <label>
+                  <%= check_box_tag 'classessection[pp2][]','PP2',checked('PP2'),id:"select"%><span >PPG</span>
+               </label>
+           </div>
+
+           <div id="pp1">
+              <label>
+                <%= check_box_tag 'classessection[class1][]','1',checked('1'),id:"select"%><span >1</span>
+              </label>
+           </div>
+           <div id="pp1">
+               <label>
+                  <%= check_box_tag 'classessection[class2][]','2',checked('2'),id:"select"%><span>2</span>
+               </label>
+           </div>
+
+           <div id="pp1">
+              <label>
+                <%= check_box_tag 'classessection[class3][]','3',checked('3'),id:"select"%><span >3</span>
+              </label>
+           </div>
+           <div id="pp1">
+               <label>
+                  <%= check_box_tag 'classessection[class4][]','4',checked('4'),id:"select"%><span >4</span>
+               </label>
+           </div>
+
+           <div id="pp1">
+              <label>
+                <%= check_box_tag 'classessection[class5][]','5',checked('5'),id:"select"%><span >5</span>
+              </label>
+           </div>
+           <div id="pp1">
+               <label>
+                  <%= check_box_tag 'classessection[class6][]','6',checked('6'),id:"select"%><span>6</span>
+               </label>
+           </div>
+        </div><br>
+
+      <div class = "section">
+          <div class = "section1">
+                      <h3>Add Sections</h3>
+                  <div class="row">
+                    <div class="input-field col s4">
+                      <%= f.number_field :addsection1,class:"sectionfont"  %>
+                      <label for="first_name" class="font-size">Add Sections</label>
+                  </div>
+                  </div><br>
+                 <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.number_field :addsection2,class:"sectionfont"  %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                  <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.number_field :addsection3 ,class:"sectionfont" %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                  <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.number_field :addsection4,class:"sectionfont"  %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                   <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.number_field :addsection5,class:"sectionfont"  %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                  <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.number_field :addsection6,class:"sectionfont"  %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                 <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.number_field :addsection7,class:"sectionfont"  %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                 <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.number_field :addsection8,class:"sectionfont"  %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+          </div>
+          <div class = "section2 ">
+                  <div class="row">
+                    <div class="input-field col s4">
+                      <%= f.text_field :sections1,class:"sectionfont" %>
+                      <label for="first_name" class="font-size" >Add Sections</label>
+                  </div>
+                  </div><br>
+                 <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.text_field :sections2 ,class:"sectionfont" %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                  <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.text_field :sections3,class:"sectionfont"  %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                  <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.text_field :sections4,class:"sectionfont"  %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                   <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.text_field :sections5,class:"sectionfont"  %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                  <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.text_field :sections6,class:"sectionfont"  %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                 <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.text_field :sections7, class:"sectionfont" %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+                 <div class="row">
+                    <div class="input-field col s4">
+                       <%= f.text_field :sections8 ,class:"sectionfont" %>
+                         <label for="first_name" class="font-size">Add Sections</label>
+                     </div>
+                 </div><br>
+            </div>
+         </div>
+      
+
+         <div class="actions">
+          <%= f.submit "create classes&sections",class:"submit"%>
+      
+      </div>
+   </div>
+ 
+<% end %>

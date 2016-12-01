@@ -1,0 +1,1 @@
+json.array! @schooldetails, partial: 'schooldetails/schooldetail', as: :schooldetail

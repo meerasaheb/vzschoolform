@@ -1,0 +1,73 @@
+<%= form_for(schooldetail) do |f| %>
+  <% if schooldetail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(schooldetail.errors.count, "error") %> prohibited this schooldetail from being saved:</h2>
+
+      <ul>
+      <% schooldetail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class = "form1">
+<h1 id= "newschooldetails">NEW SCHOOl DETAILS </h1>
+ <img  src="../assets/Cancel-128.png" class="deleteimg1"> 
+<div class= "part1">
+  <div class="field">
+    <%= f.label :name, "SCHOOLNAME" ,id:"schoolname" %>
+    <%= f.text_field :schoolname %></br>
+  </div></br>
+
+  <div class="schoola">
+    <%= f.label :name, "ADDRESS",id:"schooladdress" %>
+    <%= f.text_area :address %></br>
+  </div></br>
+
+  <div class="schoolcity">
+    <%= f.label :name, "CITY"%></br>
+    <%= f.text_field :city,class:"field" %></br>
+  </div></br>
+
+  <div class="schoolstate ">
+    <%= f.label :name,"STATE"%></br>
+    <%= f.text_field :state,class:"field" %>
+  </div>
+
+  <div class="schoolstate">
+    <%= f.label :name, "PINCODE" %></br>
+    <%= f.number_field :pincode,class:"field" %>
+  </div>
+  </div>
+
+  <div class="left-part">
+
+    <%= f.label :name ,"AFFILIATED BOARD:", class:"text-muted" %><br/>
+    <div class="field">
+    <p>
+      <%= f.radio_button :affiliatedboard, 'CBSE', id:"test1"%>
+      <label for="test1">
+      <span class="test1">CBSE</span></label>
+    
+    
+     
+      <%= f.radio_button :affiliatedboard, 'ICSE', id:"test2"%>
+      <label for="test2"><span class="test1">ICSE</span></label>
+    
+    
+      <%= f.radio_button :affiliatedboard, 'Matric', id:"test3"%>
+      <label for="test3"><span class="test1">ICSE</span></label></br>
+    </p></br>
+    <p>
+      <%= f.radio_button :affiliatedboard, 'State Board', id:"test4"%>
+      <label for="test4"><span class="test1">State Board</span></label>
+    </p>
+  </div>
+</div> 
+      <div class="actions">
+           <%= f.submit "SchoolDeatil", class:"submit" %>
+     </div>
+  </div>
+<% end %>

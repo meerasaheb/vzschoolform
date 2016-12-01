@@ -1,0 +1,1 @@
+json.partial! "subsrcibingplans/subsrcibingplan", subsrcibingplan: @subsrcibingplan

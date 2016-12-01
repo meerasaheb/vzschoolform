@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vzschoolform</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   <header>
+    <div class="container-fluid">
+      <div class="logo-part">
+        <img class="logo" alt="Brand" src="../assets/Skala-icon.png"> 
+       <%= link_to image_tag("settings.svg",class:'a') %>
+        </div>
+    </div>
+  </header>
+  <div class="navbar">
+      <ul class="">
+      <li><img alt="Brand" src="../assets/male3.svg"> <%= link_to 'User Management Portal', new_schooldetail_path %></li>
+      <li><img alt="Brand" src="../assets/cash-register.svg"><%= link_to 'Registration Portal', new_schooldetail_path %></li>
+      <li><img alt="Brand" src="../assets/controls.svg"> <%= link_to 'Content Portal', new_schooldetail_path %></li> 
+    </ul>
+  </div>
+ 
+    <%= yield %>
+  </body>
+</html>
